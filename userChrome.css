@@ -8,7 +8,10 @@
 	--light: rgb(188,192,187) !important;
 	--urlbar-row-hover-bg: rgb(41,42,45) !important;
 }
+
+
 @media(-moz-proton)  {
+
 	#main-window[privatebrowsingmode="temporary"] {
 		background-color: var(--darkest) !important;
 	}
@@ -49,7 +52,7 @@
 
 
 	#main-window[privatebrowsingmode="temporary"] toolbarbutton {
-		fill: white !important;
+		fill: var(--light) !important;
 		--toolbarbutton-hover-background: var(--dark) !important;
 		--toolbarbutton-active-background: var(--dark) !important;
 	}
@@ -81,8 +84,10 @@
 	} 
 
 	/* This portion is a work in progress */
-	#main-window[privatebrowsingmode="temporary"] .urlbarView-row[selected] 
+	#main-window[privatebrowsingmode="temporary"] .urlbarView-row[selected] >
 	.urlbarView-row-inner {
-		background-color: yellow;
+		background-color: var(--urlbar-row-hover-bg) !important;
+		color: white !important;
 	}
+
 }
