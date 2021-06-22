@@ -78,13 +78,13 @@ Made for Firefox 89.0.1 */
 }
 
 .urlbarView-row[selected]>.urlbarView-row-inner {
-	border-left: 4px solid rgb(26, 115, 232) !important;
+	border-left: 4px solid var(--urlbar-row-border) !important;
 }
 
 #main-window[privatebrowsingmode="temporary"] .urlbarView-row[selected]>.urlbarView-row-inner {
 	background-color: var(--urlbar-row-hover-bg) !important;
 	color: white !important;
-	border-left-color: rgb(130, 180, 248) !important;
+	border-left-color: var(--urlbar-row-border-private) !important;
 }
 
 .urlbarView {
