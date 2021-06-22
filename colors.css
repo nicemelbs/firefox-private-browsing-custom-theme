@@ -1,0 +1,7 @@
+:root {
+    --darkest: rgb(32, 33, 36) !important;
+    --darker: rgb(53, 54, 58) !important;
+    --dark: rgb(69, 70, 73) !important;
+    --light: rgb(188, 192, 187) !important;
+    --urlbar-row-hover-bg: rgb(41, 42, 45) !important;
+}

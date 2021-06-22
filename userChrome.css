@@ -1,13 +1,8 @@
-/* This file tries to copy Google Chrome's incognito mode visual distinction. Mainly applying a darker theme on the title bar, bookmarks bar and address bar.*/
+/* This file tries to copy Google Chrome's incognito mode visual distinction. 
+Mainly applying a darker theme on the title bar, bookmarks bar and address bar.
+Made for Firefox 89.0.1 */
 
-:root {
-	--darkest: rgb(32, 33, 36) !important;
-	--darker: rgb(53, 54, 58) !important;
-	--dark: rgb(69, 70, 73) !important;
-	--light: rgb(188, 192, 187) !important;
-	--urlbar-row-hover-bg: rgb(41, 42, 45) !important;
-}
-
+@import url("colors.css");
 #main-window[privatebrowsingmode="temporary"] {
 	background-color: var(--darkest) !important;
 }
