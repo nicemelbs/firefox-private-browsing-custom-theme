@@ -1,0 +1,8 @@
+@import ("userChrome.css");
+
+ @-moz-document url("about:privatebrowsing") {
+    html.private {
+        --in-content-page-background:  rgb(32,33,36) !important;
+    }
+}
+
