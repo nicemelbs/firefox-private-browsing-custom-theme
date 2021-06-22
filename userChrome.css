@@ -1,93 +1,89 @@
-
 /* This file tries to copy Google Chrome's incognito mode visual distinction. Mainly applying a darker theme on the title bar, bookmarks bar and address bar.*/
 
 :root {
-	--darkest: rgb(32,33,36) !important;
-	--darker: rgb(53,54,58) !important;
-	--dark: rgb(69,70,73) !important;
-	--light: rgb(188,192,187) !important;
-	--urlbar-row-hover-bg: rgb(41,42,45) !important;
+	--darkest: rgb(32, 33, 36) !important;
+	--darker: rgb(53, 54, 58) !important;
+	--dark: rgb(69, 70, 73) !important;
+	--light: rgb(188, 192, 187) !important;
+	--urlbar-row-hover-bg: rgb(41, 42, 45) !important;
 }
 
-
-@media(-moz-proton)  {
-
+@media(-moz-proton) {
 	#main-window[privatebrowsingmode="temporary"] {
 		background-color: var(--darkest) !important;
 	}
-
 	#main-window[privatebrowsingmode="temporary"] #navigator-toolbox {
-		background-color:  var(--darkest) !important;
+		background-color: var(--darkest) !important;
 		color: white !important;
 		border-bottom-color: var(--darkest) !important;
 	}
-
+	#main-window[privatebrowsingmode="temporary"] #urlbar[open]>.urlbarView>.urlbarView-body-outer>.urlbarView-body-inner {
+		border-top: 1px solid var(--darkest) !important;
+	}
 	#main-window[privatebrowsingmode="temporary"] tab {
 		color: var(--light) !important;
 	}
-
 	#main-window[privatebrowsingmode="temporary"] tab[selected] {
 		color: white !important;
 	}
-
-	#main-window[privatebrowsingmode="temporary"] tab[selected] .tab-background{
+	#main-window[privatebrowsingmode="temporary"] tab[selected] .tab-background {
 		background-color: var(--darker) !important;
 	}
-
 	#main-window[privatebrowsingmode="temporary"] #nav-bar {
 		background-color: var(--darker) !important;
 		color: white !important;
 	}
-
 	#main-window[privatebrowsingmode="temporary"] #urlbar-search-mode-indicator {
 		background-color: var(--darker) !important;
 		color: var(--light) !important;
 	}
-
 	/* bookmarks toolbar */
 	#main-window[privatebrowsingmode="temporary"] #PersonalToolbar {
 		background-color: var(--darker) !important;
 		color: white !important;
 	}
-
-
 	#main-window[privatebrowsingmode="temporary"] toolbarbutton {
 		fill: var(--light) !important;
 		--toolbarbutton-hover-background: var(--dark) !important;
 		--toolbarbutton-active-background: var(--dark) !important;
 	}
-
 	#main-window[privatebrowsingmode="temporary"] #urlbar-background {
 		background-color: var(--darkest) !important;
 		border-color: var(--darkest) !important;
 	}
-
 	#main-window[privatebrowsingmode="temporary"] #urlbar-input-container {
 		color: white !important;
 	}
-
 	#main-window[privatebrowsingmode="temporary"] #urlbar-results {
 		color: white !important;
 	}
-
-	#main-window[privatebrowsingmode="temporary"] 
-	.urlbarView-row:hover > .urlbarView-row-inner { 
-		background-color: var(--urlbar-row-hover-bg) !important; 
+	#main-window[privatebrowsingmode="temporary"] .urlbarView-row:hover>.urlbarView-row-inner {
+		background-color: var(--urlbar-row-hover-bg) !important;
 	}
-
 	#urlbar .search-one-offs:not([hidden]) {
 		display: none !important;
 	}
-
-	#urlbar-background { 
+	#urlbar-background {
 		border-radius: 1em !important;
-	} 
-
-	/* This portion is a work in progress */
-	#main-window[privatebrowsingmode="temporary"] .urlbarView-row[selected] >
-	.urlbarView-row-inner {
+	}
+	.urlbarView-row[selected]>.urlbarView-row-inner {
+		border-left: 4px solid rgb(26, 115, 232) !important;
+	}
+	#main-window[privatebrowsingmode="temporary"] .urlbarView-row[selected]>.urlbarView-row-inner {
 		background-color: var(--urlbar-row-hover-bg) !important;
 		color: white !important;
+		border-left-color: rgb(130, 180, 248) !important;
 	}
-
+	.urlbarView {
+		width: 100% !important;
+		margin-inline: 0 !important;
+	}
+	.urlbarView-row-inner {
+		padding-inline: calc(5px + var(--urlbar-container-padding) + var(--urlbarView-item-inline-padding)) !important;
+		border-radius: revert !important;
+	}
+	.search-one-offs {
+		margin-inline: calc(5px + var(--urlbar-container-padding)) !important;
+		width: auto !important;
+	}
 }
