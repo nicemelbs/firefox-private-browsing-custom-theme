@@ -2,7 +2,7 @@
 Mainly applying a darker theme on the title bar, bookmarks bar and address bar.
 Made for Firefox 89.0.1 */
 
-@import url("colors.css");
+@import url("defaults.css");
 #main-window[privatebrowsingmode="temporary"] {
 	background-color: var(--darkest) !important;
 }

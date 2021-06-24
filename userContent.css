@@ -1,4 +1,4 @@
-@import url("colors.css");
+@import url("defaults.css");
 @-moz-document url("about:privatebrowsing") {
     html.private {
         --in-content-page-background: var(--darkest) !important;
