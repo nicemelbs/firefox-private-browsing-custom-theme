@@ -25,8 +25,10 @@ Made for Firefox 89.0.1 */
 	color: white !important;
 }
 
-#main-window[privatebrowsingmode="temporary"] tab[selected] .tab-background {
+#main-window[privatebrowsingmode="temporary"] 
+	 .tab-background[selected]{
 	background-color: var(--darker) !important;
+	background-image: none !important;
 }
 
 #main-window[privatebrowsingmode="temporary"] #nav-bar {
@@ -79,6 +81,7 @@ Made for Firefox 89.0.1 */
 
 .urlbarView-row[selected]>.urlbarView-row-inner {
 	border-left: 4px solid var(--urlbar-row-border) !important;
+	background-color: var(--urlbar-row-hover-bg) !important;
 }
 
 #main-window[privatebrowsingmode="temporary"] .urlbarView-row[selected]>.urlbarView-row-inner {
@@ -100,4 +103,10 @@ Made for Firefox 89.0.1 */
 .search-one-offs {
 	margin-inline: calc(5px + var(--urlbar-container-padding)) !important;
 	width: auto !important;
+}
+
+@media(prefers-color-scheme: dark) {
+	.tab-label:not([selected]) {
+		color: #a8a8a8 !important;
+	}
 }

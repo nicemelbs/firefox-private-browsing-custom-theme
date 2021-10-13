@@ -1,17 +1,23 @@
 :root {
 
 	--light: #bcc0bb !important;
-	--urlbar-row-hover-bg: #292a2d !important;
 	--urlbar-row-border: #1a73e8 !important;
 	--urlbar-row-border-private: #82b4f8 !important;
+	--urlbar-row-hover-bg: #292a2d !important;
 	--proton-tab-block-margin: 0px !important;
+	
 }
+
 
 @media(prefers-color-scheme: dark) {
 	:root {
 		--darkest: #210439 !important;
 		--darker: #371356 !important;
 		--dark: #522b72 !important;
+	}
+
+	#main-window[privatebrowsingmode="temporary"] {
+		--urlbar-row-hover-bg: var(--dark) !important;
 	}
 }
 
