@@ -4,3 +4,11 @@
         --in-content-page-background: var(--darkest) !important;
     }
 }
+
+@-moz-document domain("old.reddit.com") {
+	.arrow.down {
+		visibility: visible !important;
+		display: block !important;
+	}
+}
+

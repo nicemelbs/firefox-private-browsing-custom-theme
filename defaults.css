@@ -1,10 +1,24 @@
 :root {
-	--darkest: rgb(32, 33, 36) !important;
-	--darker: rgb(53, 54, 58) !important;
-	--dark: rgb(69, 70, 73) !important;
-	--light: rgb(188, 192, 187) !important;
-	--urlbar-row-hover-bg: rgb(41, 42, 45) !important;
-	--urlbar-row-border: rgb(26,115,232) !important;
-	--urlbar-row-border-private: rgb(130,180,248) !important;
+
+	--light: #bcc0bb !important;
+	--urlbar-row-hover-bg: #292a2d !important;
+	--urlbar-row-border: #1a73e8 !important;
+	--urlbar-row-border-private: #82b4f8 !important;
 	--proton-tab-block-margin: 0px !important;
+}
+
+@media(prefers-color-scheme: dark) {
+	:root {
+		--darkest: #210439 !important;
+		--darker: #371356 !important;
+		--dark: #522b72 !important;
+	}
+}
+
+@media(prefers-color-scheme: light) {
+	:root {
+		--darkest: #202124 !important;
+		--darker: #35363a !important;
+		--dark: #454649 !important;
+	}
 }
